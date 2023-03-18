@@ -6,6 +6,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ForexistingUserComponent } from './Forexisting-user/Forexisting-user.component';
+import { NewCustomerComponent } from './New-customer/New-customer.component';
 
 @NgModule({
   imports: [
@@ -13,19 +15,20 @@ import { ProductListComponent } from './product-list/product-list.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-    ])
+      { path: 'Existing', component: ForexistingUserComponent },
+      { path: 'New', component: NewCustomerComponent },
+    ]),
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent
+    ProductListComponent,
+    ForexistingUserComponent,
+    NewCustomerComponent,
   ],
-  bootstrap: [
-    AppComponent
-  ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
+export class AppModule {}
 
 /*
 Copyright Google LLC. All Rights Reserved.
